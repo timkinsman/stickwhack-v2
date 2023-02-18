@@ -33,7 +33,7 @@ export const Home = () => {
           <Typography variant='h1' style={{ transform: 'translateX(12px)' }}>
             {englese ? 'NOT' : 'PAS'}
           </Typography>
-          <Typography variant='h1' style={{ marginTop: '-40px' }}>
+          <Typography variant='h1' style={{ marginTop: mobile ? '-24px' : '-40px' }}>
             {englese ? 'STICK' : 'BÂTON'}
           </Typography>
         </Space>
