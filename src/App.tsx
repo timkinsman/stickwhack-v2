@@ -1,4 +1,4 @@
-import { Box, Layout } from 'petald';
+import { Layout } from 'petald';
 import { Header } from './components/Header';
 import SwitchRoutes from './routes/SwitchRoutes';
 
@@ -9,9 +9,7 @@ const App = () => (
     </Layout.Header>
 
     <Layout.Content>
-      {/* <Box onResize={undefined} onResizeCapture={undefined} style={{ padding: '20px' }}> */}
       <SwitchRoutes />
-      {/* </Box> */}
     </Layout.Content>
 
     <Layout.Footer>{/* Footer */}</Layout.Footer>

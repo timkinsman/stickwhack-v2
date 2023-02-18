@@ -1,10 +1,7 @@
 import { createStyles } from 'petald';
 import { COLORS } from '../../AppTheme';
-import { HeaderProps, HeaderStyleProps } from './Header.types';
 
-type RuleNames = keyof HeaderStyleProps;
-
-export const useStyles = createStyles<RuleNames, HeaderProps>({
+export const useStyles = createStyles({
   container: {
     width: '100%',
     zIndex: 99999,

@@ -1,10 +1,9 @@
-import { Box } from 'petald';
-import { Example } from '../../components/Example';
+import { Box, Typography } from 'petald';
 
 export const NotFound = () => {
   return (
     <Box onResize={undefined} onResizeCapture={undefined}>
-      <Example msg='Not Found!' />
+      <Typography variant='h2'>Page doesn&apos;t exist!</Typography>
     </Box>
   );
 };

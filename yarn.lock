@@ -7138,10 +7138,10 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==
 
-petald@^2.0.15:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/petald/-/petald-2.0.15.tgz#35696e18a96de84eb23c0ba5e79a7fe45a883c6e"
-  integrity sha512-V1XwO+x12alYavjGhW3TuV8HAiz+SRhj65vdoO+cMBHVfV8IQjQG4yW6podugR47WMI6k2V42oH+t+f3yvbBTg==
+petald@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/petald/-/petald-2.1.0.tgz#bb41e29d02fb76dfcf564bd4ba7669cf3fad14b9"
+  integrity sha512-3s9IAfqxH6SqtV37xddPVO4zhGNW4bfjxw78OueFmsZabfFqofPmIqeK/FFSZui82Vpe+CLZZ46np5vMHIdMvg==
 
 picocolors@^0.2.1:
   version "0.2.1"

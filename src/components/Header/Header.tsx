@@ -2,12 +2,13 @@ import { Box, Divider, Space, Typography } from 'petald';
 import React, { useEffect, useState } from 'react';
 import { ReactComponent as IconStarFilled } from '../../assets/icons/star_filled.svg';
 import { getScrollPercent } from '../../utils/helpers';
+import { useMobile } from '../../utils/hooks';
 import { useStyles } from './Header.styles';
-import { HeaderProps } from './Header.types';
 
-export const Header = ({ className = '', style = {} }: HeaderProps): JSX.Element => {
+export const Header = (): JSX.Element => {
   const [scrollPercent, setScrollPercent] = useState(getScrollPercent());
   const classes = useStyles({ scrollPercent });
+  const mobile = useMobile();
 
   const onScroll = () => {
     setScrollPercent(getScrollPercent());
@@ -21,17 +22,17 @@ export const Header = ({ className = '', style = {} }: HeaderProps): JSX.Element
 
   return (
     <Space
-      className={`${classes.container} ${className}`}
+      className={classes.container}
       style={{
         alignItems: 'baseline',
         rowGap: 0,
-        flexWrap: 'wrap',
+        flexWrap: mobile ? 'wrap' : undefined,
         paddingBottom: '40px',
         overflow: 'hidden',
       }}
       gap='large'
     >
-      <Typography variant='h1'>STICKWHACK</Typography>
+      <Typography variant={mobile ? 'h2' : 'h1'}>STICKWHACK</Typography>
 
       <Box
         onResize={undefined}
@@ -40,7 +41,7 @@ export const Header = ({ className = '', style = {} }: HeaderProps): JSX.Element
       >
         <Divider className={classes.divider} />
         <Box className={classes.icon} onResize={undefined} onResizeCapture={undefined}>
-          <IconStarFilled className={classes.star} />
+          <IconStarFilled className={classes.star} height={mobile ? 40 : undefined} />
         </Box>
       </Box>
     </Space>
