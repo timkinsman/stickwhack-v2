@@ -4,8 +4,34 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #eeffd6;
+  user-select: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+  font-size: 15px;
+}
+
+/* 
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+} */
+
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }

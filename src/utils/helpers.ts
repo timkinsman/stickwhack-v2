@@ -22,3 +22,11 @@ export const devLog = (
     console.log(`%c${context.toUpperCase()} ${name}: `, `color: ${color}`, msg);
   }
 };
+
+export const getScrollPercent = () => {
+  const h = document.documentElement,
+    b = document.body,
+    st = 'scrollTop',
+    sh = 'scrollHeight';
+  return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100 || 0;
+};

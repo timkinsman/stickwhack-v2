@@ -5,8 +5,16 @@ export const COLORS = {
   SUCCESS_GREEN: '#009944',
   WARNING_ORANGE: '#f0541e',
   WHITE: '#FFFFFF',
+  STICKWHACK_BLUE: '#2A1DFF',
 };
 
-const theme = {};
+const theme = {
+  text: {
+    primary: '#E83888',
+  },
+  typography: {
+    fontFamily: ['loos-extended'].join(','),
+  },
+};
 
 export default theme;

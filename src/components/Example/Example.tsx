@@ -19,5 +19,9 @@ export const Example = ({ msg }: ExampleProps) => {
     devLog('success', 'Example', loading.ids.join(', '));
   }, [loading.ids]);
 
-  return <Box className={classes.msg}>{msg}</Box>;
+  return (
+    <Box className={classes.msg} onResize={undefined} onResizeCapture={undefined}>
+      {msg}
+    </Box>
+  );
 };
