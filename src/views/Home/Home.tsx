@@ -69,6 +69,7 @@ export const Home = () => {
             className={classes.image}
             src={work?.img}
             onClick={() => navigate(`/work/${work?.slug}`)}
+            style={{ root: { paddingTop: '70.0606%' }, skeleton: { borderRadius: '78px' } }}
           />
         ))}
       </Grid>
@@ -83,7 +84,7 @@ export const Home = () => {
             ILLUSTRATION
           </Typography>
           <Typography variant='h2' style={{ fontFamily: 'tuppence' }}>
-            WORK
+            work
           </Typography>
         </Space>
 
@@ -95,6 +96,7 @@ export const Home = () => {
               className={classes.image}
               src={work?.img}
               onClick={() => navigate(`/work/${work?.slug}`)}
+              style={{ skeleton: { borderRadius: '78px' } }}
             />
           ))}
         </Grid>
