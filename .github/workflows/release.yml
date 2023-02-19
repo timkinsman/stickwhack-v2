@@ -1,10 +1,12 @@
-name: "tagged-release"
+name: 'Tagged Release'
 
+# Only trigger, when the CI workflow succeeded
 on:
-  push:
-    branches:
-      - "main"
-      
+  workflow_run:
+    workflows: ['CI']
+    types:
+      - completed
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -15,13 +17,14 @@ jobs:
       - name: Extract version
         id: extract_version
         uses: Saionaro/extract-package-version@v1.0.6
-        
+
       - name: Print version
         run: echo ${{ steps.extract_version.outputs.version }}
-        
+
       - name: Tag & release
         uses: avakar/tag-and-release@v1
         with:
           tag_name: ${{ format('v{0}', steps.extract_version.outputs.version) }}
+          release_name: ${{ format('Release v{0}', steps.extract_version.outputs.version) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
